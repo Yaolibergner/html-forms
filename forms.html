@@ -36,7 +36,7 @@
 
 		<p>Place your orders here! You know you want to.</p>
 
-		<form>
+		<form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
 			First Name: <input type="text" name="firstname"><br>
 			Last Name: <input type="text" name="lastname"><br>
 			Melon Type:
@@ -53,8 +53,21 @@
 				<input type="radio" name="time" value="pm">PM
 				<input type="radio" name="time" value="wat">WAT
 			<br>
-			
-
-
+			Returning customer?
+				<input type="radio" name="returning" value="yes">Yes
+				<input type="radio" name="returning" value="no">No
+			<br>
+			For Statistical Purposes:
+				<input type="checkbox" name="stats" value="Dog">Dog
+				<input type="checkbox" name="stats" value="Cat">Cat
+				<input type="checkbox" name="stats" value="Hedgehog">Hedgehog
+				<input type="checkbox" name="stats" value="Balloonicorn">Balloonicorn
+				<input type="checkbox" name="stats" value="Yak">Yak
+			<br>
+				<input type="submit">
+		</form>
 	</body>
+	<footer>
+		* Quantities given are by the flat.
+	</footer>
 </html>
