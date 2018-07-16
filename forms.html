@@ -6,7 +6,7 @@
 	<body>
 		<h1>Order!</h1>
 		<h3>Prices</h3>
-		
+		<div style="background-color:lightpink; width:200px">
 		<table>
 			<tr>
 				<th>Melon Name</th>
@@ -33,12 +33,13 @@
 				<td>$11.99</td> 
 			</tr>
 		</table>
+	</div>
 
 		<p>Place your orders here! You know you want to.</p>
 
 		<form action="https://ubermelon-order-form.herokuapp.com/process" method="POST">
-			First Name: <input type="text" name="firstname"><br>
-			Last Name: <input type="text" name="lastname"><br>
+			First Name:* <input type="text" name="firstname" required><br>
+			Last Name:* <input type="text" name="lastname" required><br>
 			Melon Type:
 				<select name="melontype">
 					<option value="watermelon">Watermelon</option>
@@ -56,6 +57,9 @@
 			Returning customer?
 				<input type="radio" name="returning" value="yes">Yes
 				<input type="radio" name="returning" value="no">No
+			<br>
+			Delivery notes:*
+				<textarea name="deliverynotes" maxlength="150" required></textarea>
 			<br>
 			For Statistical Purposes:
 				<input type="checkbox" name="stats" value="Dog">Dog
